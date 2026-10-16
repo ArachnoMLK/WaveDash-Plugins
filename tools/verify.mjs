@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Vérifie le catalogue : chaque paquet existe, son empreinte et sa taille sont celles d'index.json,
 // et son contenu décompressé est identique aux sources de plugins/ (manifeste et script). Aucun paquet modifié à la main.
-import { createHash } from 'node:crypto'
+import { createHash, createPublicKey, verify } from 'node:crypto'
 import { readdirSync, readFileSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 import { inflateRawSync } from 'node:zlib'
@@ -18,7 +18,11 @@ function unzip(buf) {                                   // archives produites pa
   }
   return files
 }
-const index = JSON.parse(readFileSync(join(root, 'index.json'), 'utf8'))
+const indexBuf = readFileSync(join(root, 'index.json'))
+let signed = false
+try { signed = verify(null, indexBuf, createPublicKey(readFileSync(join(root, 'catalog-public.pem'))), Buffer.from(readFileSync(join(root, 'index.json.sig'), 'utf8').trim(), 'base64')) } catch { signed = false }
+if (!signed) fail('index.json : signature absente ou invalide (lance node tools/build.mjs avec la clé privée)')
+const index = JSON.parse(indexBuf.toString('utf8'))
 const sources = {}
 for (const dir of readdirSync(join(root, 'plugins'))) {
   const src = join(root, 'plugins', dir); if (!statSync(src).isDirectory()) continue
