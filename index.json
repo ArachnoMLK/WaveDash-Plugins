@@ -4,7 +4,7 @@
     {
       "id": "wavedash.brawlhalla-api",
       "name": "Brawlhalla (API officielle)",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "author": "WaveDash",
       "description": {
         "fr": "Ton profil Brawlhalla par l'API officielle : ELO 1v1 et 2v2, pic, classements, parties, victoires, niveau, et le détail par légende. Demande une clé personnelle de Blue Mammoth Games.",
@@ -16,14 +16,14 @@
         ],
         "folder": false
       },
-      "file": "packages/wavedash.brawlhalla-api-1.0.0.wdsh",
-      "size": 3619,
-      "sha256": "80dfcbd13feb28d3b6c465441c9bce2c534094ca82c2be29d4adb85864acbbcf"
+      "file": "packages/wavedash.brawlhalla-api-1.2.0.wdsh",
+      "size": 4023,
+      "sha256": "ace8daa60afa212553fc00ef9413980808a4d88e705f44b6c192f2d9ea4cb875"
     },
     {
       "id": "wavedash.brawlhalla-replays",
       "name": "Brawlhalla Replays",
-      "version": "1.7.0",
+      "version": "1.8.0",
       "author": "WaveDash",
       "description": {
         "fr": "Lit tes fichiers .replay Brawlhalla dans un dossier : victoires, défaites, stocks, durée, et le détail de chaque partie (joueurs, scores, frise des KOs). Tout est lu en local, aucun accès réseau.",
@@ -34,16 +34,17 @@
         "folder": true,
         "folderExtensions": [
           ".replay"
-        ]
+        ],
+        "images": true
       },
-      "file": "packages/wavedash.brawlhalla-replays-1.7.0.wdsh",
-      "size": 22927,
-      "sha256": "430b33ff70a716350f8af004904ab463e0b4e911ccb93579aa4ad9a24bd899af"
+      "file": "packages/wavedash.brawlhalla-replays-1.8.0.wdsh",
+      "size": 24766,
+      "sha256": "2553a853b2f6d6032215a8a480c339d6a2a0562fe20a97c0825368a4e910546c"
     },
     {
       "id": "wavedash.discord-server",
       "name": "Discord (serveurs)",
-      "version": "1.2.3",
+      "version": "1.2.4",
       "author": "WaveDash",
       "description": {
         "fr": "Suit tes serveurs Discord avec l'API officielle. Avec un bot : tous les serveurs où il est présent (membres, en ligne, messages par jour et par salon, membres les plus actifs), ou un seul serveur avec son ID. Sans bot : membres, en ligne et boosts d'après un lien d'invitation.",
@@ -55,9 +56,9 @@
         ],
         "folder": false
       },
-      "file": "packages/wavedash.discord-server-1.2.3.wdsh",
-      "size": 8231,
-      "sha256": "d022033b3f2eb83e9d7d23f739dacbfeaa8e262384d09f1cb78d6cb38fe5b26b"
+      "file": "packages/wavedash.discord-server-1.2.4.wdsh",
+      "size": 8298,
+      "sha256": "179f97ee215f9020b03fe0c0b1a74ba4ad8db7736febd091598f8cd8ec06196f"
     },
     {
       "id": "wavedash.example.folder-stats",
