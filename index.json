@@ -2,6 +2,25 @@
   "format": 1,
   "plugins": [
     {
+      "id": "wavedash.brawlhalla-api",
+      "name": "Brawlhalla (API officielle)",
+      "version": "1.0.0",
+      "author": "WaveDash",
+      "description": {
+        "fr": "Ton profil Brawlhalla par l'API officielle : ELO 1v1 et 2v2, pic, classements, parties, victoires, niveau, et le détail par légende. Demande une clé personnelle de Blue Mammoth Games.",
+        "en": "Your Brawlhalla profile through the official API: 1v1 and 2v2 ELO, peak, rankings, games, wins, level, and per-legend stats. Requires a personal key from Blue Mammoth Games."
+      },
+      "permissions": {
+        "network": [
+          "api.brawlhalla.com"
+        ],
+        "folder": false
+      },
+      "file": "packages/wavedash.brawlhalla-api-1.0.0.wdsh",
+      "size": 3619,
+      "sha256": "80dfcbd13feb28d3b6c465441c9bce2c534094ca82c2be29d4adb85864acbbcf"
+    },
+    {
       "id": "wavedash.brawlhalla-replays",
       "name": "Brawlhalla Replays",
       "version": "1.7.0",
