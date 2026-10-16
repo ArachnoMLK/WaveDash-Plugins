@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+// Empaquette chaque plugin de plugins/ en packages/<id>-<version>.wdsh et écrit index.json (catalogue lu par WaveDash).
+// Usage : node tools/build.mjs        (à lancer avant chaque commit qui modifie un plugin)
+import { createHash } from 'node:crypto'
+import { execFileSync } from 'node:child_process'
+import { readdirSync, readFileSync, rmSync, mkdirSync, writeFileSync, statSync } from 'node:fs'
+import { join } from 'node:path'
+
+const root = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
+const out = join(root, 'packages')
+rmSync(out, { recursive: true, force: true }); mkdirSync(out)
+const plugins = []
+for (const dir of readdirSync(join(root, 'plugins')).sort()) {
+  const src = join(root, 'plugins', dir)
+  if (!statSync(src).isDirectory()) continue
+  const m = JSON.parse(readFileSync(join(src, 'manifest.json'), 'utf8'))
+  const file = `packages/${m.id}-${m.version}.wdsh`
+  execFileSync(process.execPath, [join(root, 'tools', 'wdsh-pack.mjs'), src, join(root, file)], { stdio: 'ignore' })
+  const buf = readFileSync(join(root, file))
+  plugins.push({ id: m.id, name: m.name, version: m.version, author: m.author ?? '', description: m.description ?? '',
+    minAppVersion: m.minAppVersion, permissions: m.permissions ?? {}, file, size: buf.length, sha256: createHash('sha256').update(buf).digest('hex') })
+}
+writeFileSync(join(root, 'index.json'), JSON.stringify({ format: 1, plugins }, null, 2) + '\n')
+console.log(`${plugins.length} plugins → index.json`)

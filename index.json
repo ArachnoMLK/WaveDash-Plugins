@@ -1,0 +1,101 @@
+{
+  "format": 1,
+  "plugins": [
+    {
+      "id": "wavedash.brawlhalla-replays",
+      "name": "Brawlhalla Replays",
+      "version": "1.3.0",
+      "author": "WaveDash",
+      "description": {
+        "fr": "Lit tes fichiers .replay Brawlhalla dans un dossier : victoires, défaites, stocks, durée, et le détail de chaque partie (joueurs, scores, frise des KOs). Tout est lu en local, aucun accès réseau.",
+        "en": "Reads your Brawlhalla .replay files from a folder: wins, losses, stocks, duration, and a detail view per match (players, scores, KO timeline). Everything is read locally, no network access."
+      },
+      "permissions": {
+        "network": [],
+        "folder": true,
+        "folderExtensions": [
+          ".replay"
+        ]
+      },
+      "file": "packages/wavedash.brawlhalla-replays-1.3.0.wdsh",
+      "size": 16773,
+      "sha256": "0a7cf042f95f1295609816e4954addeaf5769ba22382466eeb967f5b2d091cd2"
+    },
+    {
+      "id": "wavedash.discord-server",
+      "name": "Discord (serveurs)",
+      "version": "1.1.0",
+      "author": "WaveDash",
+      "description": {
+        "fr": "Suit tes serveurs Discord avec l'API officielle. Avec un bot : tous les serveurs où il est présent (membres, en ligne, messages par jour et par salon, membres les plus actifs), ou un seul serveur avec son ID. Sans bot : membres, en ligne et boosts d'après un lien d'invitation.",
+        "en": "Tracks your Discord servers with the official API. With a bot: every server it is in (members, online, messages per day and per channel, most active members), or a single server by ID. Without a bot: members, online and boosts from an invite link."
+      },
+      "permissions": {
+        "network": [
+          "discord.com"
+        ],
+        "folder": false
+      },
+      "file": "packages/wavedash.discord-server-1.1.0.wdsh",
+      "size": 7155,
+      "sha256": "2197709509be2d6abb34c0cf43e55e112cde4cdaab11aa9c442baf54ff1db9a3"
+    },
+    {
+      "id": "wavedash.example.folder-stats",
+      "name": "Statistiques d'un dossier",
+      "version": "1.0.0",
+      "author": "WaveDash",
+      "description": {
+        "fr": "Exemple : compte les fichiers d'un dossier que tu choisis, suit leur taille et liste les plus récents. Aucun accès réseau.",
+        "en": "Example: counts the files of a folder you choose, tracks their size and lists the most recent ones. No network access."
+      },
+      "permissions": {
+        "network": [],
+        "folder": true,
+        "folderExtensions": []
+      },
+      "file": "packages/wavedash.example.folder-stats-1.0.0.wdsh",
+      "size": 1326,
+      "sha256": "43d6196be080d7f27fb67df1b280dd40a4f159921e481e0d701696263a7bf549"
+    },
+    {
+      "id": "wavedash.tiktok-profile",
+      "name": "TikTok (profil public)",
+      "version": "1.0.0",
+      "author": "WaveDash",
+      "description": {
+        "fr": "Suit un profil TikTok public : abonnés, abonnements, likes reçus, vidéos. Lit la page publique du profil (sans compte ni clé). Fragile : la page peut changer, et cette lecture n'est pas une API officielle.",
+        "en": "Tracks a public TikTok profile: followers, following, likes received, videos. Reads the public profile page (no account or key). Fragile: the page can change, and this is not an official API."
+      },
+      "permissions": {
+        "network": [
+          "www.tiktok.com"
+        ],
+        "folder": false
+      },
+      "file": "packages/wavedash.tiktok-profile-1.0.0.wdsh",
+      "size": 2004,
+      "sha256": "4082e1dea9bd83b30dd642f3ac85098c632cd3bd2866dfa8558d5160e39c2a50"
+    },
+    {
+      "id": "wavedash.example.weather",
+      "name": "Météo (Open-Meteo)",
+      "version": "1.0.0",
+      "author": "WaveDash",
+      "description": {
+        "fr": "Exemple : température, humidité et vent d'une ville, via l'API gratuite Open-Meteo (sans clé).",
+        "en": "Example: temperature, humidity and wind for a city, via the free Open-Meteo API (no key)."
+      },
+      "permissions": {
+        "network": [
+          "api.open-meteo.com",
+          "geocoding-api.open-meteo.com"
+        ],
+        "folder": false
+      },
+      "file": "packages/wavedash.example.weather-1.0.0.wdsh",
+      "size": 1342,
+      "sha256": "aa2617849863da796d31b15c7816d41033632ada7290f3426745f4433f9ba4dc"
+    }
+  ]
+}
