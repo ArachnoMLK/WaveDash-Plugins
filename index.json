@@ -24,7 +24,7 @@
     {
       "id": "wavedash.discord-server",
       "name": "Discord (serveurs)",
-      "version": "1.2.2",
+      "version": "1.2.3",
       "author": "WaveDash",
       "description": {
         "fr": "Suit tes serveurs Discord avec l'API officielle. Avec un bot : tous les serveurs où il est présent (membres, en ligne, messages par jour et par salon, membres les plus actifs), ou un seul serveur avec son ID. Sans bot : membres, en ligne et boosts d'après un lien d'invitation.",
@@ -36,9 +36,9 @@
         ],
         "folder": false
       },
-      "file": "packages/wavedash.discord-server-1.2.2.wdsh",
-      "size": 8130,
-      "sha256": "5b7bf6cd5646bf247b290a3c1eb1ba3fc9e5459075579d48c654ebbfcdba1ff2"
+      "file": "packages/wavedash.discord-server-1.2.3.wdsh",
+      "size": 8231,
+      "sha256": "d022033b3f2eb83e9d7d23f739dacbfeaa8e262384d09f1cb78d6cb38fe5b26b"
     },
     {
       "id": "wavedash.example.folder-stats",
