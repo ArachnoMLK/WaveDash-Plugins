@@ -23,7 +23,7 @@
     {
       "id": "wavedash.brawlhalla-replays",
       "name": "Brawlhalla Replays",
-      "version": "1.9.1",
+      "version": "1.10.0",
       "author": "WaveDash",
       "description": {
         "fr": "Lit tes fichiers .replay Brawlhalla dans un dossier : victoires, défaites, stocks, durée, et le détail de chaque partie (joueurs, scores, frise des KOs). Tout est lu en local, aucun accès réseau.",
@@ -38,9 +38,9 @@
         ],
         "images": true
       },
-      "file": "packages/wavedash.brawlhalla-replays-1.9.1.wdsh",
-      "size": 26135,
-      "sha256": "94549da10a1c587ebdb82588e14057f77bc9d40b18be6511e16395bae1f577c9"
+      "file": "packages/wavedash.brawlhalla-replays-1.10.0.wdsh",
+      "size": 27028,
+      "sha256": "bdaa21c157380eb0f0161177a159a8efab4a1e33a862cca8be2ce4a4d7694dc8"
     },
     {
       "id": "wavedash.discord-server",
