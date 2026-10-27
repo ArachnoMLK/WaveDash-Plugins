@@ -1,4 +1,4 @@
-# Vérifie que packages/ et index.json correspondent aux sources de plugins/ (empreintes, versions, contenu).
+# Checks that packages/ and index.json match the sources in plugins/ (hashes, versions, content).
 name: Check
 on: [push, pull_request]
 permissions:

@@ -3,12 +3,12 @@
   "plugins": [
     {
       "id": "wavedash.brawlhalla-api",
-      "name": "Brawlhalla (API officielle)",
-      "version": "1.2.0",
+      "name": "Brawlhalla (official API)",
+      "version": "1.2.1",
       "author": "WaveDash",
       "description": {
-        "fr": "Ton profil Brawlhalla par l'API officielle : ELO 1v1 et 2v2, pic, classements, parties, victoires, niveau, et le détail par légende. Demande une clé personnelle de Blue Mammoth Games.",
-        "en": "Your Brawlhalla profile through the official API: 1v1 and 2v2 ELO, peak, rankings, games, wins, level, and per-legend stats. Requires a personal key from Blue Mammoth Games."
+        "en": "Your Brawlhalla profile through the official API: 1v1 and 2v2 ELO, peak, rankings, games, wins, level, and per-legend stats. Requires a personal key from Blue Mammoth Games.",
+        "fr": "Ton profil Brawlhalla par l'API officielle : ELO 1v1 et 2v2, pic, classements, parties, victoires, niveau, et le détail par légende. Demande une clé personnelle de Blue Mammoth Games."
       },
       "permissions": {
         "network": [
@@ -16,18 +16,18 @@
         ],
         "folder": false
       },
-      "file": "packages/wavedash.brawlhalla-api-1.2.0.wdsh",
-      "size": 4023,
-      "sha256": "ace8daa60afa212553fc00ef9413980808a4d88e705f44b6c192f2d9ea4cb875"
+      "file": "packages/wavedash.brawlhalla-api-1.2.1.wdsh",
+      "size": 3962,
+      "sha256": "2c1e9571a3a4063adbfb0babded3c91453fa5c55105217a639a566f4efa6a12f"
     },
     {
       "id": "wavedash.brawlhalla-replays",
       "name": "Brawlhalla Replays",
-      "version": "1.10.0",
+      "version": "1.10.1",
       "author": "WaveDash",
       "description": {
-        "fr": "Lit tes fichiers .replay Brawlhalla dans un dossier : victoires, défaites, stocks, durée, et le détail de chaque partie (joueurs, scores, frise des KOs). Tout est lu en local, aucun accès réseau.",
-        "en": "Reads your Brawlhalla .replay files from a folder: wins, losses, stocks, duration, and a detail view per match (players, scores, KO timeline). Everything is read locally, no network access."
+        "en": "Reads your Brawlhalla .replay files from a folder: wins, losses, stocks, duration, and a detail view per match (players, scores, KO timeline). Everything is read locally, no network access.",
+        "fr": "Lit tes fichiers .replay Brawlhalla dans un dossier : victoires, défaites, stocks, durée, et le détail de chaque partie (joueurs, scores, frise des KOs). Tout est lu en local, aucun accès réseau."
       },
       "minAppVersion": "1.1.0",
       "permissions": {
@@ -38,18 +38,18 @@
         ],
         "images": true
       },
-      "file": "packages/wavedash.brawlhalla-replays-1.10.0.wdsh",
-      "size": 27028,
-      "sha256": "bdaa21c157380eb0f0161177a159a8efab4a1e33a862cca8be2ce4a4d7694dc8"
+      "file": "packages/wavedash.brawlhalla-replays-1.10.1.wdsh",
+      "size": 26440,
+      "sha256": "0f83a320e4e94137b393e7aaaaf1d8934af97b12d503fa9658b61213359eb4f6"
     },
     {
       "id": "wavedash.discord-server",
-      "name": "Discord (serveurs)",
-      "version": "1.2.4",
+      "name": "Discord (servers)",
+      "version": "1.2.5",
       "author": "WaveDash",
       "description": {
-        "fr": "Suit tes serveurs Discord avec l'API officielle. Avec un bot : tous les serveurs où il est présent (membres, en ligne, messages par jour et par salon, membres les plus actifs), ou un seul serveur avec son ID. Sans bot : membres, en ligne et boosts d'après un lien d'invitation.",
-        "en": "Tracks your Discord servers with the official API. With a bot: every server it is in (members, online, messages per day and per channel, most active members), or a single server by ID. Without a bot: members, online and boosts from an invite link."
+        "en": "Tracks your Discord servers with the official API. With a bot: every server it is in (members, online, messages per day and per channel, most active members), or a single server by ID. Without a bot: members, online and boosts from an invite link.",
+        "fr": "Suit tes serveurs Discord avec l'API officielle. Avec un bot : tous les serveurs où il est présent (membres, en ligne, messages par jour et par salon, membres les plus actifs), ou un seul serveur avec son ID. Sans bot : membres, en ligne et boosts d'après un lien d'invitation."
       },
       "permissions": {
         "network": [
@@ -57,36 +57,36 @@
         ],
         "folder": false
       },
-      "file": "packages/wavedash.discord-server-1.2.4.wdsh",
-      "size": 8298,
-      "sha256": "179f97ee215f9020b03fe0c0b1a74ba4ad8db7736febd091598f8cd8ec06196f"
+      "file": "packages/wavedash.discord-server-1.2.5.wdsh",
+      "size": 8115,
+      "sha256": "f0bf1c876e2d6acd3f2e9e1436a4cdd678015fa9f4ae65aa0ea97288ef1778c7"
     },
     {
       "id": "wavedash.example.folder-stats",
-      "name": "Statistiques d'un dossier",
-      "version": "1.0.0",
+      "name": "Folder stats",
+      "version": "1.0.1",
       "author": "WaveDash",
       "description": {
-        "fr": "Exemple : compte les fichiers d'un dossier que tu choisis, suit leur taille et liste les plus récents. Aucun accès réseau.",
-        "en": "Example: counts the files of a folder you choose, tracks their size and lists the most recent ones. No network access."
+        "en": "Example: counts the files of a folder you choose, tracks their size and lists the most recent ones. No network access.",
+        "fr": "Exemple : compte les fichiers d'un dossier que tu choisis, suit leur taille et liste les plus récents. Aucun accès réseau."
       },
       "permissions": {
         "network": [],
         "folder": true,
         "folderExtensions": []
       },
-      "file": "packages/wavedash.example.folder-stats-1.0.0.wdsh",
-      "size": 1326,
-      "sha256": "43d6196be080d7f27fb67df1b280dd40a4f159921e481e0d701696263a7bf549"
+      "file": "packages/wavedash.example.folder-stats-1.0.1.wdsh",
+      "size": 1249,
+      "sha256": "efb1c1a26bbaef0d6659398ba837e2ae44a9508d00f73d255c8c70a802543d9f"
     },
     {
       "id": "wavedash.tiktok-profile",
-      "name": "TikTok (profil public)",
-      "version": "1.0.0",
+      "name": "TikTok (public profile)",
+      "version": "1.0.1",
       "author": "WaveDash",
       "description": {
-        "fr": "Suit un profil TikTok public : abonnés, abonnements, likes reçus, vidéos. Lit la page publique du profil (sans compte ni clé). Fragile : la page peut changer, et cette lecture n'est pas une API officielle.",
-        "en": "Tracks a public TikTok profile: followers, following, likes received, videos. Reads the public profile page (no account or key). Fragile: the page can change, and this is not an official API."
+        "en": "Tracks a public TikTok profile: followers, following, likes received, videos. Reads the public profile page (no account or key). Fragile: the page can change, and this is not an official API.",
+        "fr": "Suit un profil TikTok public : abonnés, abonnements, likes reçus, vidéos. Lit la page publique du profil (sans compte ni clé). Fragile : la page peut changer, et cette lecture n'est pas une API officielle."
       },
       "permissions": {
         "network": [
@@ -94,18 +94,18 @@
         ],
         "folder": false
       },
-      "file": "packages/wavedash.tiktok-profile-1.0.0.wdsh",
-      "size": 2004,
-      "sha256": "4082e1dea9bd83b30dd642f3ac85098c632cd3bd2866dfa8558d5160e39c2a50"
+      "file": "packages/wavedash.tiktok-profile-1.0.1.wdsh",
+      "size": 1987,
+      "sha256": "0876fab5494c3f094d4684109cbf6d67177ee089b48f6a34eed25944795ab226"
     },
     {
       "id": "wavedash.example.weather",
-      "name": "Météo (Open-Meteo)",
-      "version": "1.0.0",
+      "name": "Weather (Open-Meteo)",
+      "version": "1.0.1",
       "author": "WaveDash",
       "description": {
-        "fr": "Exemple : température, humidité et vent d'une ville, via l'API gratuite Open-Meteo (sans clé).",
-        "en": "Example: temperature, humidity and wind for a city, via the free Open-Meteo API (no key)."
+        "en": "Example: temperature, humidity and wind for a city, via the free Open-Meteo API (no key).",
+        "fr": "Exemple : température, humidité et vent d'une ville, via l'API gratuite Open-Meteo (sans clé)."
       },
       "permissions": {
         "network": [
@@ -114,9 +114,9 @@
         ],
         "folder": false
       },
-      "file": "packages/wavedash.example.weather-1.0.0.wdsh",
-      "size": 1342,
-      "sha256": "aa2617849863da796d31b15c7816d41033632ada7290f3426745f4433f9ba4dc"
+      "file": "packages/wavedash.example.weather-1.0.1.wdsh",
+      "size": 1306,
+      "sha256": "d0a5f60b40eccdce138c7324e8834ffe69796d40c0e7d4bc1cf6bac1f8b3629a"
     }
   ]
 }

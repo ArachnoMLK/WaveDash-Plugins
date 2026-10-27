@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Empaquette chaque plugin de plugins/ en packages/<id>-<version>.wdsh et écrit index.json (catalogue lu par WaveDash).
-// Usage : node tools/build.mjs        (à lancer avant chaque commit qui modifie un plugin)
+// Packs each plugin of plugins/ into packages/<id>-<version>.wdsh and writes index.json (catalog read by WaveDash).
+// Usage: node tools/build.mjs        (run before every commit that changes a plugin)
 import { createHash, createPrivateKey, sign } from 'node:crypto'
 import { execFileSync } from 'node:child_process'
 import { readdirSync, readFileSync, rmSync, mkdirSync, writeFileSync, statSync } from 'node:fs'
@@ -22,10 +22,10 @@ for (const dir of readdirSync(join(root, 'plugins')).sort()) {
 }
 const index = Buffer.from(JSON.stringify({ format: 1, plugins }, null, 2) + '\n')
 writeFileSync(join(root, 'index.json'), index)
-// Signature Ed25519 de index.json : WaveDash refuse un index non signé par cette clé. La clé privée n'est JAMAIS dans le dépôt :
-// par défaut ../wavedash-catalog-private.pem (à côté du dossier du dépôt), ou le chemin donné par WAVEDASH_CATALOG_KEY.
+// Ed25519 signature of index.json: WaveDash rejects an index not signed with this key. The private key is NEVER in the repository:
+// by default ../wavedash-catalog-private.pem (next to the repository folder), or the path given by WAVEDASH_CATALOG_KEY.
 const keyPath = process.env.WAVEDASH_CATALOG_KEY || join(root, '..', 'wavedash-catalog-private.pem')
 let key
-try { key = createPrivateKey(readFileSync(keyPath)) } catch { console.error(`Clé privée introuvable (${keyPath}) : index.json non signé.`); process.exit(1) }
+try { key = createPrivateKey(readFileSync(keyPath)) } catch { console.error(`Private key not found (${keyPath}): index.json not signed.`); process.exit(1) }
 writeFileSync(join(root, 'index.json.sig'), sign(null, index, key).toString('base64') + '\n')
-console.log(`${plugins.length} plugins → index.json (signé)`)
+console.log(`${plugins.length} plugins → index.json (signed)`)
